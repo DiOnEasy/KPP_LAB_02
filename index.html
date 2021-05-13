@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #map {
+            height: 100vh;
+            z-index: 4;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        img {
+            z-index: 5;
+        }
+        
+        .weather__form {
+            position: absolute;
+            width: 25%;
+            top: 0;
+            left: 35%;
+            z-index: 99999;
+            background: rgba(0, 0, 0, .3);
+            text-align: center;
+            color: wheat;
+            border-radius: 5%;
+            padding-top: 1%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="map">
+
+    </div>
+    <div class="weather__form">
+        <form action="">
+            <input style=" border: none; background: transparent;" id="input" value="" placeholder="Введіть місто" type="text">
+            <p style="user-select: none;" id="submit"> Підтвердити</p>
+        </form>
+
+        <div class="weather">
+            <h2>Погода в місті <span class="city"></span></h2>
+            <p>Погода: <span class="temp"></span>°C</p>
+            <p>Вологість: <span class="humidity"></span>%</p>
+            <p>Вітер: <span class="wind"></span> км/год</p>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCy9sTydqhbP9u1Fwths2nNeiU3wX4Aaw8&callback=initMap" async defer></script>
+
+    <script src="main.js"></script>
+
+
+</body>
+
+</html>
