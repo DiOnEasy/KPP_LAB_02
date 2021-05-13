@@ -1,7 +1,7 @@
 let map;
 
 
-const weatherAPI = "1b5ee5a1a74d624a74750350327ea372"
+const weatherAPI = "WEATHER_API_KEY"
 
 function handleAPI(data) {
     // console.log(data)
